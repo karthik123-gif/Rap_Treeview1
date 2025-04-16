@@ -1,0 +1,4 @@
+@EndUserText.label: 'exposing in v4'
+define service Ztree_v4 {
+  expose zdemo_tree;
+}

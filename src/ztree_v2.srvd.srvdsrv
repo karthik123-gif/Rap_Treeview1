@@ -1,0 +1,5 @@
+@EndUserText.label: 'v2 service'
+define service Ztree_v2 {
+  expose zdemo_tree;
+  expose zanalytic_cds;
+}

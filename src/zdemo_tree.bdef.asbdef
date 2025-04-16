@@ -1,0 +1,32 @@
+managed implementation in class zbp_demo_tree unique;
+strict ( 2 );
+with draft;
+
+define behavior for zdemo_tree //alias <alias_name>
+persistent table ztreedemo
+draft table ztreedemo_d
+lock master
+total etag Salary
+authorization master ( instance )
+etag master Salary
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update) Employee;
+
+  draft action Resume;
+  draft action Activate;
+  draft action Discard;
+  draft action Edit;
+  draft determine action Prepare ;
+
+  mapping for ztreedemo {
+  Employee = employee;
+  FirstName  = first_name;
+  LastName   = last_name;
+  Manager  = manager;
+  Salary  = salary;
+
+  }
+}
